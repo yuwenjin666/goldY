@@ -1,0 +1,6 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://www.geekgold.xyz/sitemap.xml
+Sitemap: https://www.geekgold.xyz/baidusitemap.xml
