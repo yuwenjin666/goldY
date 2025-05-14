@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="zn-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>云计算方向-Ansible搭建wordpress | GoldY</title><meta name="author" content="GoldY"><meta name="copyright" content="GoldY"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Ansible搭建wordpress">
+<meta property="og:type" content="article">
+<meta property="og:title" content="云计算方向-Ansible搭建wordpress">
+<meta property="og:url" content="https://www.geekgold.xyz/posts/944d69ee.html">
+<meta property="og:site_name" content="GoldY">
+<meta property="og:description" content="Ansible搭建wordpress">
+<meta property="og:locale" content="zn_CN">
+<meta property="og:image" content="https://www.geekgold.xyz/img/cloud-com.jpg">
+<meta property="article:published_time" content="2025-05-14T02:48:38.000Z">
+<meta property="article:modified_time" content="2025-05-14T03:15:54.077Z">
+<meta property="article:author" content="GoldY">
+<meta property="article:tag" content="云计算">
+<meta property="article:tag" content="云计算职业技能大赛">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.geekgold.xyz/img/cloud-com.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "云计算方向-Ansible搭建wordpress",
+  "url": "https://www.geekgold.xyz/posts/944d69ee.html",
+  "image": "https://www.geekgold.xyz/img/cloud-com.jpg",
+  "datePublished": "2025-05-14T02:48:38.000Z",
+  "dateModified": "2025-05-14T03:15:54.077Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "GoldY",
+      "url": "https://www.geekgold.xyz/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.geekgold.xyz/posts/944d69ee.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="bing-site-verification" content="E05CD8D6921B8F2AA32324DF2B267557"/><meta name="baidu-site-verification" content="codeva-tCktTl1n17"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '云计算方向-Ansible搭建wordpress',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/bg2.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/preview.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-link"></i><span> 工具链接</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fa fa-cog"></i><span> 渗透工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cloud-com.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/logo.png" alt="Logo"><span class="site-name">GoldY</span></a><a class="nav-page-title" href="/"><span class="site-name">云计算方向-Ansible搭建wordpress</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-link"></i><span> 工具链接</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fa fa-cog"></i><span> 渗透工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">云计算方向-Ansible搭建wordpress</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-05-14T02:48:38.000Z" title="Created 2025-05-14 10:48:38">2025-05-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-05-14T03:15:54.077Z" title="Updated 2025-05-14 11:15:54">2025-05-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/">云计算</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/%E6%8A%80%E8%83%BD%E5%A4%A7%E8%B5%9B%E6%B1%87%E6%80%BB/">技能大赛汇总</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">442</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>1mins</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="一-ansible搭建wordpress"><a href="#一-ansible搭建wordpress" class="headerlink" title="一.ansible搭建wordpress"></a>一.ansible搭建wordpress</h1><p><strong>基于lamp构建wordpress</strong></p>
+<table>
+<thead>
+<tr>
+<th>master</th>
+<th>192.168.200.100</th>
+<th>控制节点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>node1</td>
+<td>192.168.200.101</td>
+<td>web服务器</td>
+</tr>
+<tr>
+<td>node2</td>
+<td>192.168.200.102</td>
+<td>mysql服务器</td>
+</tr>
+</tbody></table>
+<p><strong>vi &#x2F;etc&#x2F;ansible&#x2F;host</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[master]</span><br><span class="line">master</span><br><span class="line">[web]</span><br><span class="line">192.168.200.101</span><br><span class="line">node1</span><br><span class="line">[database]</span><br><span class="line">192.168.200.102</span><br><span class="line">node2</span><br></pre></td></tr></table></figure>
+
+<p><strong>vi wordpress.yaml</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="comment"># hosts: 后面可写主机组名或主机名</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">hosts:</span> <span class="string">all</span></span><br><span class="line">  <span class="attr">remote_user:</span> <span class="string">root</span></span><br><span class="line">  <span class="comment"># 定义变量</span></span><br><span class="line">  <span class="attr">vars:</span></span><br><span class="line">    <span class="attr">db_pkgs:</span></span><br><span class="line">      <span class="comment"># 以下的-为变量“值”，也就是在引用db_pkgs变量时，可取变量中的值</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">mariadb</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">mariadb-server</span></span><br><span class="line">    <span class="attr">web_pkgs:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">httpd</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">php</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">php-gd</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">php-mysql</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gd</span></span><br><span class="line">  <span class="comment"># tasks：ansible机器要执行操作的任务列表（依次执行）</span></span><br><span class="line">  <span class="attr">tasks:</span></span><br><span class="line">    <span class="comment"># 安装mariadb</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">install</span> <span class="string">mariadb</span></span><br><span class="line">    <span class="comment"># 引用变量时使用&#123;&#123;&#125;&#125;</span></span><br><span class="line">      <span class="attr">yum:</span> <span class="string">name=&#123;&#123;</span> <span class="string">db_pkgs</span> <span class="string">&#125;&#125;</span> <span class="string">state=latest</span></span><br><span class="line">      <span class="attr">when:</span> <span class="string">ansible_nodename</span> <span class="string">==</span> <span class="string">&#x27;node2&#x27;</span></span><br><span class="line">    <span class="comment"># 安装webserver相关服务（httpd、php）</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">install</span> <span class="string">webserver</span></span><br><span class="line">      <span class="attr">yum:</span> <span class="string">name=&#123;&#123;</span> <span class="string">web_pkgs</span> <span class="string">&#125;&#125;</span> <span class="string">state=latest</span></span><br><span class="line">      <span class="attr">when:</span> <span class="string">ansible_nodename</span> <span class="string">==</span> <span class="string">&#x27;node1&#x27;</span></span><br><span class="line">    <span class="comment"># 启动mariadb</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">start</span> <span class="string">mariadb</span></span><br><span class="line">      <span class="attr">service:</span> <span class="string">name=mariadb</span> <span class="string">state=started</span></span><br><span class="line">      <span class="comment"># 触发（类似c语言的中断信号），触发后会去handlers执行相关操作</span></span><br><span class="line">      <span class="attr">notify:</span> <span class="string">create_db</span></span><br><span class="line">      <span class="comment"># when判断，用来针对某主机执行的操作，比如这里是指定对database组里的机器进行操作</span></span><br><span class="line">      <span class="attr">when:</span> <span class="string">ansible_nodename</span> <span class="string">==</span> <span class="string">&#x27;node2&#x27;</span></span><br><span class="line">    <span class="comment"># 启动webserver相关服务</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">start</span> <span class="string">webserver</span></span><br><span class="line">      <span class="attr">service:</span> <span class="string">name=httpd</span> <span class="string">state=started</span></span><br><span class="line">      <span class="attr">when:</span> <span class="string">ansible_nodename</span> <span class="string">==</span> <span class="string">&#x27;node1&#x27;</span></span><br><span class="line">    <span class="comment"># 将项目包发送到指定机器（及解包）  </span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">to</span> <span class="string">package</span></span><br><span class="line">      <span class="attr">unarchive:</span> <span class="string">src=/root/wordpress-4.9.18-zh_CN.tar.gz</span> <span class="string">dest=/var/www/html</span></span><br><span class="line">      <span class="attr">when:</span> <span class="string">ansible_nodename</span> <span class="string">==</span> <span class="string">&#x27;node1&#x27;</span></span><br><span class="line">    <span class="comment"># 修改指定机器网站发布目录属组/主</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">chown</span></span><br><span class="line">      <span class="attr">file:</span> <span class="string">owner=apache</span> <span class="string">group=apache</span> <span class="string">recurse=yes</span> <span class="string">path=var/www/html</span></span><br><span class="line">      <span class="attr">when:</span> <span class="string">ansible_nodename</span> <span class="string">==</span> <span class="string">&#x27;node1&#x27;</span></span><br><span class="line">  <span class="comment"># 触发操作    </span></span><br><span class="line">  <span class="attr">handlers:</span></span><br><span class="line">    <span class="comment"># 注意：这里的name名字必须和notify的触发名称保持一致</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">create_db</span></span><br><span class="line">      <span class="comment"># 调用shell解释器执行相关命令</span></span><br><span class="line">      <span class="attr">shell:</span> <span class="string">mysql</span> <span class="string">-e</span> <span class="string">&quot;create database wordpress;grant all on *.* to &#x27;zrs&#x27;@&#x27;%&#x27; identified by &#x27;015210&#x27;;flush privileges;&quot;</span></span><br><span class="line">      <span class="comment"># 同样这里是针对database这个主机组里的机器</span></span><br><span class="line">      <span class="attr">when:</span> <span class="string">ansible_nodename</span> <span class="string">==</span> <span class="string">&#x27;node2&#x27;</span></span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://www.geekgold.xyz">GoldY</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://www.geekgold.xyz/posts/944d69ee.html">https://www.geekgold.xyz/posts/944d69ee.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/">云计算</a><a class="post-meta__tags" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97%E8%81%8C%E4%B8%9A%E6%8A%80%E8%83%BD%E5%A4%A7%E8%B5%9B/">云计算职业技能大赛</a></div><div class="post-share"><div class="social-share" data-image="/img/cloud-com.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/zhifubao.jpg" target="_blank"><img class="post-qr-code-img" src="/img/zhifubao.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/posts/a182640a.html" title="云计算方向-2023年金砖一带一路职业技能大赛云计算赛题"><img class="cover" src="/img/cloud-com.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">云计算方向-2023年金砖一带一路职业技能大赛云计算赛题</div></div><div class="info-2"><div class="info-item-1">A场次题目：Openstack 平台部署与运维任务1 私有云平台环境初始化1.初始化操作系统 使用提供的用户名密码，登录竞赛云平台。根据表 1 中的 IP 地址规划，设置各服务器节点的 IP 地址，确保网络正常通信，设置控制节点主机名为 Contro ller，计算节点主机名为 Compute，并修改 hosts 文件将 IP 地址映射为主机名， 关闭防火墙并设置为开机不启动，设置 SELinux 为 Permissive 模式并设置永久 关闭。请查看控制节点和计算节点主机名，使用命令查看 SELinux 状态，使用 head 命令、tail 命令和 cut 命令提取出永久关闭 SELinux 的关键信息。 将以上命令及返回结果提交到答题框  配置host 123456vi /etc/hosts127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4::1         localhost localhost.localdomain localhost6...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/6bf8b7d7.html" title="云计算方向-2022年云计算职业技能大赛国赛题"><img class="cover" src="/img/cloud-com.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-14</div><div class="info-item-2">云计算方向-2022年云计算职业技能大赛国赛题</div></div><div class="info-2"><div class="info-item-1">第一套【任务 1】私有云服务搭建[10分]【题目 1】基础环境配置[0.5 分]使用提供的用户名密码，登录提供的 OpenStack 私有云平台，在当前租户下，使用CentOS7.9 镜像，创建两台云主机，云主机类型使用 4vCPU&#x2F;12G&#x2F;100G_50G 类型。当前租户下默认存在一张网卡，自行创建第二张网卡并连接至 controller 和 compute 节点（第二张网卡的网段为 10.10.X.0&#x2F;24，X 为工位号，不需要创建路由）。自行检查安全组策略，以确保网络正常通信与 ssh 连接，然后按以下要求配置服务器： （1）设置控制节点主机名为 controller，设置计算节点主机名为 compute；  （2）修改 hosts 文件将 IP 地址映射为主机名； 1231.查看控制节点名字为 controller 正确计 0.2 分2.查看 hosts 文件中有正确的主机名和 IP 映射计 0.2 分3.控制节点正确使用两块网卡计 0.1...</div></div></div></a><a class="pagination-related" href="/posts/a182640a.html" title="云计算方向-2023年金砖一带一路职业技能大赛云计算赛题"><img class="cover" src="/img/cloud-com.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-14</div><div class="info-item-2">云计算方向-2023年金砖一带一路职业技能大赛云计算赛题</div></div><div class="info-2"><div class="info-item-1">A场次题目：Openstack 平台部署与运维任务1 私有云平台环境初始化1.初始化操作系统 使用提供的用户名密码，登录竞赛云平台。根据表 1 中的 IP 地址规划，设置各服务器节点的 IP 地址，确保网络正常通信，设置控制节点主机名为 Contro ller，计算节点主机名为 Compute，并修改 hosts 文件将 IP 地址映射为主机名， 关闭防火墙并设置为开机不启动，设置 SELinux 为 Permissive 模式并设置永久 关闭。请查看控制节点和计算节点主机名，使用命令查看 SELinux 状态，使用 head 命令、tail 命令和 cut 命令提取出永久关闭 SELinux 的关键信息。 将以上命令及返回结果提交到答题框  配置host 123456vi /etc/hosts127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4::1         localhost localhost.localdomain localhost6...</div></div></div></a><a class="pagination-related" href="/posts/840d388d.html" title="云计算方向-2023年金砖大赛山东选拔题"><img class="cover" src="/img/cloud-com.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-14</div><div class="info-item-2">云计算方向-2023年金砖大赛山东选拔题</div></div><div class="info-2"><div class="info-item-1">A场次题目：OpenStack平台部署与运维业务场景： 某企业拟使用OpenStack搭建一个企业云平台，用于部署各类企业应用对外对内服务。云平台可实现IT资源池化，弹性分配，集中管理，性能优化以及统一安全认证等。系统结构如下图： 企业云平台的搭建使用竞赛平台提供的两台云服务器，配置如下表：    设备名称 主机名 接口 ip地址    云服务器1 controller eth0，eth1 私网：192.168.100.10&#x2F;24           私网：192.168.200.10&#x2F;24   云服务器2 compute eth0，eth1 私网：192.168.100.20&#x2F;24        ...</div></div></div></a><a class="pagination-related" href="/posts/cc6b9ff2.html" title="云计算方向-2023年GZ075 云计算应用赛项赛题"><img class="cover" src="/img/cloud-com.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-14</div><div class="info-item-2">云计算方向-2023年GZ075 云计算应用赛项赛题</div></div><div class="info-2"><div class="info-item-1">模块一 私有云（30分）企业首先完成私有云平台搭建和运维，私有云平台提供云主机、云网络、云存储等基础架构云服务，并开发自动化运维程序。 任务1 私有云服务搭建（5分）1.1.1 基础环境配置1.控制节点主机名为controller，设置计算节点主机名为compute； 12345678910#控制节点[root@localhost ~]# hostnamectl set-hostname controller[root@localhost ~]# bash[root@controller ~]##计算节点[root@localhost ~]# hostnamectl set-hostname compute[root@localhost ~]# bash[root@compute ~]#    2.hosts文件将IP地址映射为主机名。 123456#全部节点[root@controller ~]# cat /etc/hosts127.0.0.1   localhost localhost.localdomain localhost4...</div></div></div></a><a class="pagination-related" href="/posts/2c8237f4.html" title="云计算方向-2022年云计算技能国赛私有云套题"><img class="cover" src="/img/cloud-com.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-14</div><div class="info-item-2">云计算方向-2022年云计算技能国赛私有云套题</div></div><div class="info-2"><div class="info-item-1">第一套私有云运维任务：题目3. OpenStack云平台运维（10分）1.使用提供的云安全框架组件，将提供的OpenStack云平台的安全策略从http优化至https。可能会遇到 mod_ssl 安装不成功的问题，原因是mod_ssl版本不匹配，上传mod_ssl-2.4.6-97.el7.centos.x86_64.rpm ①安装工具包 1yum install -y mod_wsgi httpd mod_ssl  ②修改&#x2F;etc&#x2F;openstack-dashboard&#x2F;local_settings文件 123456vi /etc/openstack-dashboard/local_settings##在DEBUG = False下增加4行USE_SSL = TrueCSRF_COOKIE_SECURE = True		##原文中有，去掉注释即可SESSION_COOKIE_SECURE = True		##原文中有，去掉注释即可SESSION_COOKIE_HTTPONLY =...</div></div></div></a><a class="pagination-related" href="/posts/9bf3df10.html" title="云计算方向-2022年全国职业院校技能大赛容器云"><img class="cover" src="/img/cloud-com.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-14</div><div class="info-item-2">云计算方向-2022年全国职业院校技能大赛容器云</div></div><div class="info-2"><div class="info-item-1">【任务 1】容器云平台搭建[5 分] 【题目 1】平台部署–部署容器云平台[1.5 分]登录OpenStack 私有云平台，使用 CentOS7.9 镜像创建两台云主机，使用 kubeeasy 工具完成Kubernetes 1.22.1 集群的搭建。然后使用 nginx 镜像在 default 命名空间下创建一个名为exam 的Pod，并为该 Pod 设置环境变量 exam，其值为 2022。完成后提交 master 节点的用户名、密码和 IP 到答题框。 123456789101112131415161718192021222324252627282930313233#两台节点，将提供的安装包 chinaskills_cloud_paas_v2.0.2.iso 上传至 master 节点/root 目录，并解压 到/opt 目录[root@localhost ~]# mount -o loop chinaskills_cloud_paas_v2.0.2.iso /mnt/ [root@localhost ~]# cp -rfv /mnt/* /opt/...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/preview.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">GoldY</div><div class="author-info-description">不经一番寒彻骨，怎得梅花扑鼻香。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yuwenjin666"><i class="fab fa-github"></i><span>Github主页</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">联系我V：GoldY_66</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-ansible%E6%90%AD%E5%BB%BAwordpress"><span class="toc-number">1.</span> <span class="toc-text">一.ansible搭建wordpress</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/944d69ee.html" title="云计算方向-Ansible搭建wordpress"><img src="/img/cloud-com.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="云计算方向-Ansible搭建wordpress"/></a><div class="content"><a class="title" href="/posts/944d69ee.html" title="云计算方向-Ansible搭建wordpress">云计算方向-Ansible搭建wordpress</a><time datetime="2025-05-14T02:48:38.000Z" title="Created 2025-05-14 10:48:38">2025-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/a182640a.html" title="云计算方向-2023年金砖一带一路职业技能大赛云计算赛题"><img src="/img/cloud-com.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="云计算方向-2023年金砖一带一路职业技能大赛云计算赛题"/></a><div class="content"><a class="title" href="/posts/a182640a.html" title="云计算方向-2023年金砖一带一路职业技能大赛云计算赛题">云计算方向-2023年金砖一带一路职业技能大赛云计算赛题</a><time datetime="2025-05-14T02:48:37.000Z" title="Created 2025-05-14 10:48:37">2025-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d5ee981d.html" title="云计算方向-2023年一带一路职业技能大赛云计算(样题)"><img src="/img/cloud-com.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="云计算方向-2023年一带一路职业技能大赛云计算(样题)"/></a><div class="content"><a class="title" href="/posts/d5ee981d.html" title="云计算方向-2023年一带一路职业技能大赛云计算(样题)">云计算方向-2023年一带一路职业技能大赛云计算(样题)</a><time datetime="2025-05-14T02:48:35.000Z" title="Created 2025-05-14 10:48:35">2025-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/a8884406.html" title="云计算方向-2023年金砖大赛"><img src="/img/cloud-com.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="云计算方向-2023年金砖大赛"/></a><div class="content"><a class="title" href="/posts/a8884406.html" title="云计算方向-2023年金砖大赛">云计算方向-2023年金砖大赛</a><time datetime="2025-05-14T02:48:32.000Z" title="Created 2025-05-14 10:48:32">2025-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/cc6b9ff2.html" title="云计算方向-2023年GZ075 云计算应用赛项赛题"><img src="/img/cloud-com.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="云计算方向-2023年GZ075 云计算应用赛项赛题"/></a><div class="content"><a class="title" href="/posts/cc6b9ff2.html" title="云计算方向-2023年GZ075 云计算应用赛项赛题">云计算方向-2023年GZ075 云计算应用赛项赛题</a><time datetime="2025-05-14T02:47:38.000Z" title="Created 2025-05-14 10:47:38">2025-05-14</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/bottom-bg.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2025 By GoldY</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://yuwenjin666.github.io',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://yuwenjin666.github.io',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax src="/js/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://githubcalendarapi.shiguang666.eu.org/api?user=yuwenjin666";
+            var git_color =['#ebedf0', '#a2f7af', '#6ce480', '#54ad63', '#469252', '#31753c', '#1f5f2a', '#13531f', '#084111', '#032b09', '#000000'];
+            var git_user ="yuwenjin666";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log("已挂载hexo-github-calendar https://github.com/Barry-Flynn/hexo-github-calendar");
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><!-- hexo injector body_end end --></body></html>
