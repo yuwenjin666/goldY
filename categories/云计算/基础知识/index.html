@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="zn-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Category: 基础知识 | GoldY</title><meta name="author" content="GoldY"><meta name="copyright" content="GoldY"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="不经一番寒彻骨，怎得梅花扑鼻香。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GoldY">
+<meta property="og:url" content="https://www.geekgold.xyz/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:site_name" content="GoldY">
+<meta property="og:description" content="不经一番寒彻骨，怎得梅花扑鼻香。">
+<meta property="og:locale" content="zn_CN">
+<meta property="og:image" content="https://www.geekgold.xyz/img/preview.jpg">
+<meta property="article:author" content="GoldY">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.geekgold.xyz/img/preview.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.geekgold.xyz/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="bing-site-verification" content="E05CD8D6921B8F2AA32324DF2B267557"/><meta name="baidu-site-verification" content="codeva-tCktTl1n17"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Category: 基础知识',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'category'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/bg2.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/preview.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-link"></i><span> 工具链接</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fa fa-cog"></i><span> 渗透工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/logo.png" alt="Logo"><span class="site-name">GoldY</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-link"></i><span> 工具链接</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fa fa-cog"></i><span> 渗透工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">基础知识</h1></div></header><main class="layout" id="content-inner"><div id="category"><div class="article-sort-title">Category - 基础知识</div><div class="article-sort"><div class="article-sort-item year">2025</div><div class="article-sort-item"><a class="article-sort-item-img" href="/posts/8a9c0b3b.html" title="云计算方向-Prometheus入门到实战"><img src="/img/cloud.jpg" alt="云计算方向-Prometheus入门到实战" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-05-14T02:46:30.000Z" title="Created 2025-05-14 10:46:30">2025-05-14</time></div><a class="article-sort-item-title" href="/posts/8a9c0b3b.html" title="云计算方向-Prometheus入门到实战">云计算方向-Prometheus入门到实战</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/posts/7a2988b3.html" title="云计算方向-Helm入门到实战"><img src="/img/cloud.jpg" alt="云计算方向-Helm入门到实战" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-05-14T02:46:00.000Z" title="Created 2025-05-14 10:46:00">2025-05-14</time></div><a class="article-sort-item-title" href="/posts/7a2988b3.html" title="云计算方向-Helm入门到实战">云计算方向-Helm入门到实战</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/posts/1d2f039a.html" title="云计算方向-云原生技术"><img src="/img/cloud.jpg" alt="云计算方向-云原生技术" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-05-14T02:45:50.000Z" title="Created 2025-05-14 10:45:50">2025-05-14</time></div><a class="article-sort-item-title" href="/posts/1d2f039a.html" title="云计算方向-云原生技术">云计算方向-云原生技术</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/posts/4d653f4a.html" title="云计算方向-Kubernetes调优"><img src="/img/cloud.jpg" alt="云计算方向-Kubernetes调优" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-05-14T02:45:29.000Z" title="Created 2025-05-14 10:45:29">2025-05-14</time></div><a class="article-sort-item-title" href="/posts/4d653f4a.html" title="云计算方向-Kubernetes调优">云计算方向-Kubernetes调优</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/posts/fb59692f.html" title="云计算方向-Kubernetes命令总结"><img src="/img/cloud.jpg" alt="云计算方向-Kubernetes命令总结" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-05-14T02:45:09.000Z" title="Created 2025-05-14 10:45:09">2025-05-14</time></div><a class="article-sort-item-title" href="/posts/fb59692f.html" title="云计算方向-Kubernetes命令总结">云计算方向-Kubernetes命令总结</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/preview.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">GoldY</div><div class="author-info-description">不经一番寒彻骨，怎得梅花扑鼻香。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yuwenjin666"><i class="fab fa-github"></i><span>Github主页</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">联系我V：GoldY_66</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/8a9c0b3b.html" title="云计算方向-Prometheus入门到实战"><img src="/img/cloud.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="云计算方向-Prometheus入门到实战"/></a><div class="content"><a class="title" href="/posts/8a9c0b3b.html" title="云计算方向-Prometheus入门到实战">云计算方向-Prometheus入门到实战</a><time datetime="2025-05-14T02:46:30.000Z" title="Created 2025-05-14 10:46:30">2025-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/7a2988b3.html" title="云计算方向-Helm入门到实战"><img src="/img/cloud.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="云计算方向-Helm入门到实战"/></a><div class="content"><a class="title" href="/posts/7a2988b3.html" title="云计算方向-Helm入门到实战">云计算方向-Helm入门到实战</a><time datetime="2025-05-14T02:46:00.000Z" title="Created 2025-05-14 10:46:00">2025-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1d2f039a.html" title="云计算方向-云原生技术"><img src="/img/cloud.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="云计算方向-云原生技术"/></a><div class="content"><a class="title" href="/posts/1d2f039a.html" title="云计算方向-云原生技术">云计算方向-云原生技术</a><time datetime="2025-05-14T02:45:50.000Z" title="Created 2025-05-14 10:45:50">2025-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/4d653f4a.html" title="云计算方向-Kubernetes调优"><img src="/img/cloud.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="云计算方向-Kubernetes调优"/></a><div class="content"><a class="title" href="/posts/4d653f4a.html" title="云计算方向-Kubernetes调优">云计算方向-Kubernetes调优</a><time datetime="2025-05-14T02:45:29.000Z" title="Created 2025-05-14 10:45:29">2025-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/fb59692f.html" title="云计算方向-Kubernetes命令总结"><img src="/img/cloud.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="云计算方向-Kubernetes命令总结"/></a><div class="content"><a class="title" href="/posts/fb59692f.html" title="云计算方向-Kubernetes命令总结">云计算方向-Kubernetes命令总结</a><time datetime="2025-05-14T02:45:09.000Z" title="Created 2025-05-14 10:45:09">2025-05-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"><span class="card-category-list-name">云计算</span><span class="card-category-list-count">5</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">基础知识</span><span class="card-category-list-count">5</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"><span class="card-category-list-name">网络安全</span><span class="card-category-list-count">7</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8/"><span class="card-category-list-name">小迪安全</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E8%80%81%E7%94%B7%E5%AD%A9%E5%AE%89%E5%85%A8/"><span class="card-category-list-name">老男孩安全</span><span class="card-category-list-count">5</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 1.5em; color: #99a9bf">网络安全</a> <a href="/tags/Prometheus/" style="font-size: 1.1em; color: #999">Prometheus</a> <a href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/" style="font-size: 1.37em; color: #99a4b2">云计算</a> <a href="/tags/%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8/" style="font-size: 1.23em; color: #999ea6">小迪安全</a> <a href="/tags/%E8%80%81%E7%94%B7%E5%AD%A9%E5%AE%89%E5%85%A8/" style="font-size: 1.37em; color: #99a4b2">老男孩安全</a> <a href="/tags/Kubernetes/" style="font-size: 1.23em; color: #999ea6">Kubernetes</a> <a href="/tags/%E4%BA%91%E5%8E%9F%E7%94%9F%E6%8A%80%E6%9C%AF/" style="font-size: 1.1em; color: #999">云原生技术</a> <a href="/tags/Helm/" style="font-size: 1.1em; color: #999">Helm</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              May 2025
+            </span>
+            <span class="card-archive-list-count">12</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">12</div></div><div class="webinfo-item"><div class="item-name">Total Word Count :</div><div class="item-count">89.8k</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-05-14T02:53:10.758Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/bottom-bg.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2025 By GoldY</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax src="/js/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://githubcalendarapi.shiguang666.eu.org/api?user=yuwenjin666";
+            var git_color =['#ebedf0', '#a2f7af', '#6ce480', '#54ad63', '#469252', '#31753c', '#1f5f2a', '#13531f', '#084111', '#032b09', '#000000'];
+            var git_user ="yuwenjin666";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log("已挂载hexo-github-calendar https://github.com/Barry-Flynn/hexo-github-calendar");
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><!-- hexo injector body_end end --></body></html>
