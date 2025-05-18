@@ -8680,17 +8680,7 @@ f.submit ();
 
 
 <p>这些固定特征通常出现在Cookie、响应头或HTML源代码中：</p>
-<ul>
-<li><h2 id="Laravel-包含”laravel-session”、”XSRF-TOKEN”等关键字-Set-Cookie-含有XSRF-TOKEN、laravel-seesion等关键字"><a href="#Laravel-包含”laravel-session”、”XSRF-TOKEN”等关键字-Set-Cookie-含有XSRF-TOKEN、laravel-seesion等关键字" class="headerlink" title="Laravel- 包含”laravel_session”、”XSRF-TOKEN”等关键字- Set-Cookie: 含有XSRF-TOKEN、laravel_seesion等关键字"></a>Laravel<br>- 包含”laravel_session”、”XSRF-TOKEN”等关键字<br>- Set-Cookie: 含有XSRF-TOKEN、laravel_seesion等关键字</h2></li>
-<li>Yii<ul>
-<li>Set-Cookie: 包含”YII_CSRF_TOKEN”、”yii”等关键字</li>
-</ul>
-</li>
-<li>ThinkPHP<ul>
-<li>包含特定格式的Cookie或响应头</li>
-</ul>
-</li>
-</ul>
+<p>-Laravel<br> 包含”laravel_session”、”XSRF-TOKEN”等关键字<br> Set-Cookie: 含有XSRF-TOKEN、laravel_seesion等关键字<br>-Yii<br>  Set-Cookie: 包含”YII_CSRF_TOKEN”、”yii”等关键字<br>-ThinkPHP<br>  包含特定格式的Cookie或响应头</p>
 <h4 id="JAVA识别"><a href="#JAVA识别" class="headerlink" title="JAVA识别"></a>JAVA识别</h4><p>识别方法</p>
 <ul>
 <li>通过数据包特征识别（如remember me字段识别Shiro）</li>
@@ -8986,7 +8976,7 @@ f.submit ();
 <blockquote>
 <p>有效性验证</p>
 <ul>
-<li>发件人邮箱必须使用目标域名（如<a href="mailto:&#120;&#120;&#x78;&#64;&#x74;&#x61;&#x72;&#103;&#x65;&#x74;&#46;&#x63;&#111;&#109;">&#120;&#120;&#x78;&#64;&#x74;&#x61;&#x72;&#103;&#x65;&#x74;&#46;&#x63;&#111;&#109;</a>）</li>
+<li>发件人邮箱必须使用目标域名（如<a href="mailto:&#x78;&#x78;&#120;&#x40;&#116;&#x61;&#114;&#103;&#101;&#x74;&#x2e;&#99;&#111;&#x6d;">&#x78;&#x78;&#120;&#x40;&#116;&#x61;&#114;&#103;&#101;&#x74;&#x2e;&#99;&#111;&#x6d;</a>）</li>
 <li>不能是第三方邮箱服务（如126、QQ等）</li>
 </ul>
 <p>IP验证</p>
