@@ -11059,7 +11059,7 @@ f.submit ();
       </tags>
   </entry>
   <entry>
-    <title>小迪安全--安全开发下篇(3)</title>
+    <title>小迪安全--安全开发下篇(4)</title>
     <url>/posts/1288cce5.html</url>
     <content><![CDATA[<h1 id="JavaEE应用-Servlet路由技术-JDBC-Mybatis数据库-生命周期"><a href="#JavaEE应用-Servlet路由技术-JDBC-Mybatis数据库-生命周期" class="headerlink" title="JavaEE应用&amp;Servlet路由技术&amp;JDBC&amp;Mybatis数据库&amp;生命周期"></a>JavaEE应用&amp;Servlet路由技术&amp;JDBC&amp;<a href="https://so.csdn.net/so/search?q=Mybatis&spm=1001.2101.3001.7020">Mybatis</a>数据库&amp;生命周期</h1><h2 id="创建JavaEE项目"><a href="#创建JavaEE项目" class="headerlink" title="创建JavaEE项目"></a>创建JavaEE项目</h2><p>1、使用idea创建javaee</p>
 <img src="/img/xiaodi/image-20250518202732576.png" alt="image-20250518202732576" style="zoom:50%;" />
